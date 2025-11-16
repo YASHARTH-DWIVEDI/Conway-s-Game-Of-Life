@@ -119,14 +119,28 @@ This foundation helped me grow rapidly and inspired me to explore more advanced 
 
 ## 🖼️ Screenshots (Add Your Images Here)
 1. **Start Position**
+
+   User Initializes the Grid with Live cells using Mouse.
+
+   
 <img width="999" height="792" alt="Screenshot 2025-11-16 163329" src="https://github.com/user-attachments/assets/5f7c200c-1ef4-4f92-8c88-2df206404ae8" />
-   Initialize the Grid with Live cells using Mouse.
+   
+
 
 2. **Algorithm Initialized and Game follows the Rules**
-<img width="1001" height="796" alt="Screenshot 2025-11-16 163344" src="https://github.com/user-attachments/assets/3e12c523-0384-49cf-bebd-4936d98dfc09" />
-   The Live cells are interacting with the dead cells which inturn makes new cells born with green color and turns white whereas the living cells which are white     when dies changes color to red.
 
+   - The Live cells are interacting with the dead cells which inturn makes new cells born with green color and turns white whereas the living cells which are            white when dies changes color to red.
+  
+
+<img width="1001" height="796" alt="Screenshot 2025-11-16 163344" src="https://github.com/user-attachments/assets/3e12c523-0384-49cf-bebd-4936d98dfc09" />
+
+
+  
 3. **Final Result**
+
+   - The Cells which are alive due to the Rules and which are still generating and dying are shown.
+  
+
 <img width="1004" height="797" alt="image" src="https://github.com/user-attachments/assets/5b467221-5ecb-41fc-9d74-0406254bcd3e" />
-   The Cells which are alive due to the Rules and which are still generating and dying are shown.
+   
 
