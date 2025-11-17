@@ -1,7 +1,7 @@
 # Conway's Game of Life - Streamlit Web App
 
 ## Overview
-This is an interactive web-based implementation of **Conway's Game of Life**, a zero-player cellular automaton. The project was originally created as a first semester college project using Pygame, and has been adapted to run as a web application using Streamlit on Replit.
+This is an interactive web-based implementation of **Conway's Game of Life**, an automatic zero-player cellular automaton. The project was originally created as a first semester college project using Pygame, and has been adapted to run as a web application using Streamlit on Replit.
 
 ## Project Structure
 - `conway_app.py` - Main Streamlit web application (active)
