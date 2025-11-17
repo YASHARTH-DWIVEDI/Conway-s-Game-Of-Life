@@ -9,19 +9,22 @@ import time
 # ------------------------
 def step_toroidal(g: np.ndarray) -> np.ndarray:
     # fast neighbor count with np.roll (wrap-around)
+    # Convert to int for counting, then apply rules
+    g_int = g.astype(int)
     neighbors = (
-        np.roll(np.roll(g,  1, 0),  1, 1) +
-        np.roll(np.roll(g,  1, 0),  0, 1) +
-        np.roll(np.roll(g,  1, 0), -1, 1) +
-        np.roll(np.roll(g,  0, 0),  1, 1) +
-        np.roll(np.roll(g,  0, 0), -1, 1) +
-        np.roll(np.roll(g, -1, 0),  1, 1) +
-        np.roll(np.roll(g, -1, 0),  0, 1) +
-        np.roll(np.roll(g, -1, 0), -1, 1)
+        np.roll(np.roll(g_int,  1, 0),  1, 1) +
+        np.roll(np.roll(g_int,  1, 0),  0, 1) +
+        np.roll(np.roll(g_int,  1, 0), -1, 1) +
+        np.roll(np.roll(g_int,  0, 0),  1, 1) +
+        np.roll(np.roll(g_int,  0, 0), -1, 1) +
+        np.roll(np.roll(g_int, -1, 0),  1, 1) +
+        np.roll(np.roll(g_int, -1, 0),  0, 1) +
+        np.roll(np.roll(g_int, -1, 0), -1, 1)
     )
-    survive = (g & ((neighbors == 2) | (neighbors == 3)))
-    born = (~g & (neighbors == 3))
-    return (survive | born)
+    # Apply Conway's rules
+    survive = g & ((neighbors == 2) | (neighbors == 3))
+    born = (~g) & (neighbors == 3)
+    return survive | born
 
 def grid_to_image(g: np.ndarray, cell_px: int = 8, alive_color=(255,255,255), bg_color=(8,10,15)):
     rows, cols = g.shape
@@ -32,7 +35,7 @@ def grid_to_image(g: np.ndarray, cell_px: int = 8, alive_color=(255,255,255), bg
             if g[r, c]:
                 x0 = c * cell_px
                 y0 = r * cell_px
-                draw.rectangle([x0, y0, x0 + cell_px - 1, y0 + cell_px - 1], fill=alive_color)
+                draw.rectangle(((x0, y0), (x0 + cell_px - 1, y0 + cell_px - 1)), fill=alive_color)
     return img
 
 # ------------------------
@@ -59,6 +62,10 @@ with col_ctrl:
         st.session_state.running = False
         st.session_state.fps = 5
         st.session_state.toroidal = True
+    
+    # Random fill probability slider (always visible)
+    random_prob = st.slider("Random fill probability", 0.01, 0.8, 0.35, step=0.01, 
+                            help="Higher values = more alive cells. Try 0.35-0.40 for stable patterns.")
 
     btn_col1, btn_col2 = st.columns(2)
     with btn_col1:
@@ -68,8 +75,7 @@ with col_ctrl:
             st.session_state.grid = np.zeros_like(st.session_state.grid, dtype=bool)
     with btn_col2:
         if st.button("Randomize"):
-            prob = st.slider("Random fill probability", 0.01, 0.8, 0.2, step=0.01)
-            st.session_state.grid = (np.random.random((rows, cols)) < prob)
+            st.session_state.grid = (np.random.random((rows, cols)) < random_prob)
         if st.button("Reset & Resize"):
             st.session_state.grid = np.zeros((rows, cols), dtype=bool)
             st.session_state.grid_shape = (rows, cols)
@@ -103,7 +109,7 @@ with col_view:
     # draw image from current grid
     img = grid_to_image(st.session_state.grid, cell_px=cell_size)
     # show image
-    st.image(img, use_column_width=True)
+    st.image(img, width='stretch')
 
     # display stats and live auto-run loop
     st.markdown(f"**Alive:** {int(st.session_state.grid.sum())}   |   **FPS:** {st.session_state.fps}   |   **Toroidal:** {st.session_state.toroidal}")
@@ -127,4 +133,4 @@ with col_view:
 
         # sleep to control speed, then rerun to update UI
         time.sleep(1.0 / max(1, st.session_state.fps))
-        st.experimental_rerun()
+        st.rerun()
