@@ -127,8 +127,8 @@ with col_view:
                 p[1:-1, 0:-2] +               p[1:-1, 2:] +
                 p[2:  , 0:-2] + p[2:  , 1:-1] + p[2:  , 2:]
             )
-            survive = (st.session_state.grid & ((neighbors == 2) | (neighbors == 3)))
-            born = (~st.session_state.grid & (neighbors == 3))
+            survive = st.session_state.grid & ((neighbors == 2) | (neighbors == 3))
+            born = ~st.session_state.grid & (neighbors == 3)
             st.session_state.grid = (survive | born)
 
         # sleep to control speed, then rerun to update UI
