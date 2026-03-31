@@ -10,12 +10,20 @@ Simple rules. Infinite complexity.
 
 ## 📸 Screenshots
 
-| Drawing Phase |  
-|---|---|---|
-|⚪ Paint alive cells with your mouse |  
+| Drawing Phase |
+
+|⚪ Paint alive cells with your mouse | 
 | ![Start](https://github.com/user-attachments/assets/5f7c200c-1ef4-4f92-8c88-2df206404ae8) |
-| Simulation Running | | 🟢 Green = newly born · 🔴 Red = just died | | ![Running](https://github.com/user-attachments/assets/3e12c523-0384-49cf-bebd-4936d98dfc09) | 
-| Stabilized State | | Stable patterns emerge over time | | ![Final](https://github.com/user-attachments/assets/5b467221-5ecb-41fc-9d74-0406254bcd3e) |
+
+| Simulation Running |
+
+| 🟢 Green = newly born · 🔴 Red = just died | 
+| ![Running](https://github.com/user-attachments/assets/3e12c523-0384-49cf-bebd-4936d98dfc09) | 
+
+| Stabilized State | 
+
+| Stable patterns emerge over time | 
+| ![Final](https://github.com/user-attachments/assets/5b467221-5ecb-41fc-9d74-0406254bcd3e) |
 
 
 ---
