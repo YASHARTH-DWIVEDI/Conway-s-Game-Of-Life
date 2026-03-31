@@ -31,7 +31,7 @@ A browser-based version with a sidebar control panel, adjustable canvas size, to
 | Draw Cell | Left Click / Drag |
 | Erase Cell | Right Click |
 
-> **Color coding:** White = alive · 🟢 Green = born this tick · 🔴 Red = died this tick
+> **Color coding:** ⚪ White = alive · 🟢 Green = born this tick · 🔴 Red = died this tick
 
 ### Streamlit (Web)
 
