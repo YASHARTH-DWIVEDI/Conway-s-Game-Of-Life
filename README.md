@@ -8,23 +8,6 @@ Simple rules. Infinite complexity.
 
 ---
 
-## 📸 Screenshots
-
-Stage 1: Drawing Phase - ⚪ Paint alive cells with your mouse 
-
-![Start](https://github.com/user-attachments/assets/5f7c200c-1ef4-4f92-8c88-2df206404ae8)
-
-Stage 2: Simulation Running - 🟢 Green = newly born · 🔴 Red = just died 
-
-![Running](https://github.com/user-attachments/assets/3e12c523-0384-49cf-bebd-4936d98dfc09) 
-
-Stage 3: Stabilized State - Stable patterns emerge over time  
-
-![Final](https://github.com/user-attachments/assets/5b467221-5ecb-41fc-9d74-0406254bcd3e) 
-
-
----
-
 ## ✨ Two Versions
 
 ### 🖥️ Desktop — `Conway's Game Of Life.py` (Pygame)
@@ -76,6 +59,22 @@ Each cell on the grid is either **alive** or **dead**. Every generation, these f
 | Reproduction | Dead cell with exactly 3 live neighbours | Comes alive |
 
 These four lines of logic are all it takes to produce **gliders**, **oscillators**, **still lifes**, and structures of unbounded complexity.
+
+---
+
+## 📸 Screenshots
+
+Stage 1: Drawing Phase - ⚪ Paint alive cells with your mouse 
+
+![Start](https://github.com/user-attachments/assets/5f7c200c-1ef4-4f92-8c88-2df206404ae8)
+
+Stage 2: Simulation Running - 🟢 Green = newly born · 🔴 Red = just died 
+
+![Running](https://github.com/user-attachments/assets/3e12c523-0384-49cf-bebd-4936d98dfc09) 
+
+Stage 3: Stabilized State - Stable patterns emerge over time  
+
+![Final](https://github.com/user-attachments/assets/5b467221-5ecb-41fc-9d74-0406254bcd3e) 
 
 ---
 
@@ -142,16 +141,6 @@ Conway-s-Game-Of-Life/
 
 ---
 
-## 🌱 Background
-
-This project was built in my **first semester of college** as my first real programming build from scratch. I wanted something that would let me practice the fundamentals: loops, arrays, state management and rendering, while also producing something visually interesting and mathematically deep.
-
-Conway's Game of Life turned out to be a perfect fit: it is dead simple to describe, surprisingly hard to fully understand, and endlessly watchable.
-
-Building it taught me how to think in grids, how to manage a real-time event loop, how NumPy vectorization can replace slow nested loops, and how much complexity can emerge from almost nothing.
-
----
-
 ## 🚀 Features
 
 - Real-time simulation using Pygame  
@@ -166,15 +155,13 @@ Building it taught me how to think in grids, how to manage a real-time event loo
 
 ---
 
-## 📘 How It Works
+## 🌱 Background
 
-- The grid is represented as a 2D NumPy array.  
-- Each frame, the simulation calculates neighbor counts for every cell using vectorized operations.  
-- Based on the Game of Life rules, a new grid is generated and rendered onto the screen.  
-- Pygame handles the window, drawing, mouse input, and frame updates.  
-- The user can modify the grid at any time, even while the simulation is running.
+This project was built in my **first semester of college** as my first real programming build from scratch. I wanted something that would let me practice the fundamentals: loops, arrays, state management and rendering, while also producing something visually interesting and mathematically deep.
 
-This creates an interactive environment where the user can experiment with emergent patterns and real-time system evolution.
+Conway's Game of Life turned out to be a perfect fit: it is dead simple to describe, surprisingly hard to fully understand, and endlessly watchable.
+
+Building it taught me how to think in grids, how to manage a real-time event loop, how NumPy vectorization can replace slow nested loops, and how much complexity can emerge from almost nothing.
 
 ---
 
