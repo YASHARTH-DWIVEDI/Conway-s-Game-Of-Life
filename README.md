@@ -14,7 +14,7 @@ Simple rules. Infinite complexity.
 |---|---|---|
 
 | ![Start](https://github.com/user-attachments/assets/5f7c200c-1ef4-4f92-8c88-2df206404ae8) | ![Running](https://github.com/user-attachments/assets/3e12c523-0384-49cf-bebd-4936d98dfc09) | ![Final](https://github.com/user-attachments/assets/5b467221-5ecb-41fc-9d74-0406254bcd3e) |
-| Paint alive cells with your mouse | 🟢 Green = newly born · 🔴 Red = just died | Stable patterns emerge over time |
+|⚪ Paint alive cells with your mouse | 🟢 Green = newly born · 🔴 Red = just died | Stable patterns emerge over time |
 
 ---
 
