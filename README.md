@@ -1,10 +1,9 @@
 # Conway’s Game of Life — Interactive Python Simulation
 
 **This is my first project, developed during my first semester of college.**  
-It is a full implementation of **Conway’s Game of Life**, a zero-player cellular automaton where simple rules generate surprisingly complex and emergent behaviors. The simulation is built using **Python**, taking advantage of **Pygame** for real-time rendering and **NumPy** for efficient grid updates.
-
-The system updates in real time and allows complete user interaction — you can draw cells, erase them, play/pause the simulation, adjust speed, randomize patterns, and observe dynamic structures like oscillators, gliders, and more.  
-This project represents my first deep dive into programming logic, visualization, and computational thinking.
+This project was built in my first semester of college as my first real programming build from scratch. I wanted something that would let me practice the fundamentals of OOPS: loops, arrays, state management and rendering, while also producing something visually interesting and mathematically deep.
+Conway's Game of Life turned out to be a perfect fit: it is dead simple to describe, surprisingly hard to fully understand, and endlessly watchable.
+Building it taught me how to think in grids, how to manage a real-time event loop, how NumPy vectorization can replace slow nested loops, and how much complexity can emerge from almost nothing.
 
 ---
 
